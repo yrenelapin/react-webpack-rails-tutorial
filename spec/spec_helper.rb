@@ -40,6 +40,9 @@ RSpec.configure do |config|
     # Show retry status in spec process
     config.verbose_retry = true
     # Try twice (retry once)
+
+    # ENV value RSPEC_RETRY_RETRY_COUNT should be set to 1 if you don't want to retry (defined in
+    # rspec/retry)
     config.default_retry_count = 4
     # Only retry when Selenium raises Net::ReadTimeout
     # config.exceptions_to_retry = [Net::ReadTimeout]

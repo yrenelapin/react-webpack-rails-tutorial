@@ -181,7 +181,7 @@ RSpec.configure do |config|
   Capybara.asset_host = "http://localhost:3000"
 
   def js_errors_driver
-    Capybara.javascript_driver == :poltergeist ? :poltergeist_errors_ok : Capybara.javascript_driver
+    Capybara.javascript_driver =~ /^poltergeist/ ? :poltergeist_errors_ok : Capybara.javascript_driver
   end
 
   def js_selenium_driver
